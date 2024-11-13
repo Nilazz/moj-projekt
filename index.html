@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Generator Mebli</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <h1>Generator Mebli</h1>
+    <form id="furnitureForm">
+        <label for="color">Kolor:</label>
+        <select id="color">
+            <option value="czarny">Czarny</option>
+            <option value="biały">Biały</option>
+            <option value="brązowy">Brązowy</option>
+        </select>
+
+        <label for="material">Materiał:</label>
+        <select id="material">
+            <option value="drewno">Drewno</option>
+            <option value="metal">Metal</option>
+            <option value="plastik">Plastik</option>
+        </select>
+
+        <label for="furniture">Mebel:</label>
+        <select id="furniture">
+            <option value="szafa">Szafa</option>
+            <option value="stół">Stół</option>
+            <option value="krzesło">Krzesło</option>
+        </select>
+
+        <button type="button" onclick="generateResult()">Generuj wynik</button>
+    </form>
+
+    <div id="result"></div>
+
+    <script src="script.js"></script>
+</body>
+</html>
