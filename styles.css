@@ -1,12 +1,20 @@
 body {
     font-family: Arial, sans-serif;
     margin: 20px;
+}
+
+body.dark-mode {
     background-color: #121212; /* Ciemne tło dla całej strony */
     color: #ffffff; /* Jasny tekst */
 }
 
+body.light-mode {
+    background-color: #ffffff; /* Jasne tło dla całej strony */
+    color: #000000; /* Ciemny tekst */
+}
+
 h1 {
-    color: #ffffff;
+    color: inherit; /* Używa koloru z body */
 }
 
 form {
@@ -16,7 +24,6 @@ form {
 label {
     display: block;
     margin-top: 10px;
-    color: #ffffff; /* Jasny tekst dla etykiet */
 }
 
 select {
@@ -26,13 +33,22 @@ select {
     padding: 5px; /* Padding dla select */
 }
 
+body.light-mode select {
+    background-color: #ffffff; /* Jasne tło dla select w jasnym motywie */
+    color: #000000; /* Ciemny tekst dla select w jasnym motywie */
+}
+
 #result {
     margin-top: 20px;
     width: 100%;
     resize: none; /* Zapobiega zmianie rozmiaru pola tekstowego */
     background-color: #333; /* Ciemne tło dla textarea */
     color: #ffffff; /* Jasny tekst dla textarea */
-    border: 1px solid #444; /* Granica */
+}
+
+body.light-mode #result {
+    background-color: #f0f0f0; /* Jasne tło dla textarea w jasnym motywie */
+    color: #000000; /* Ciemny tekst dla textarea w jasnym motywie */
 }
 
 button {
@@ -41,7 +57,11 @@ button {
     color: #ffffff; /* Jasny tekst dla przycisków */
     border: none; /* Bez granicy */
     padding: 10px 15px; /* Padding dla przycisków */
-    cursor: pointer; /* Kursor wskazujący, że przycisk jest klikalny */
+}
+
+body.light-mode button {
+    background-color: #ddd; /* Jasne tło dla przycisków w jasnym motywie */
+    color: #000000; /* Ciemny tekst dla przycisków w jasnym motywie */
 }
 
 button:hover {

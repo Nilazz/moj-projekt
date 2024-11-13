@@ -1,3 +1,4 @@
+// Funkcja do generowania wyniku
 function generateResult() {
     const color = document.getElementById('color').value;
     const material = document.getElementById('material').value;
@@ -22,3 +23,38 @@ function copyToClipboard() {
     // Opcjonalnie, możesz dodać informację o skopiowaniu
     alert('Wynik skopiowany do schowka!');
 }
+
+// Funkcja do przełączania motywów
+function toggleTheme() {
+    const body = document.body;
+    
+    if (body.classList.contains('dark-mode')) {
+        body.classList.remove('dark-mode');
+        body.classList.add('light-mode');
+        localStorage.setItem('theme', 'light'); // Zapisz wybór w localStorage
+        document.getElementById('themeToggle').innerText = 'Przełącz na ciemny motyw';
+        
+    } else {
+        body.classList.remove('light-mode');
+        body.classList.add('dark-mode');
+        localStorage.setItem('theme', 'dark'); // Zapisz wybór w localStorage
+        document.getElementById('themeToggle').innerText = 'Przełącz na jasny motyw';
+        
+    }
+}
+
+// Ładowanie motywu z localStorage po załadowaniu strony
+window.onload = function() {
+   const savedTheme = localStorage.getItem('theme') || 'dark'; // Domyślnie ustaw ciemny motyw
+
+   if (savedTheme === 'dark') {
+       document.body.classList.add('dark-mode');
+       document.getElementById('themeToggle').innerText = 'Przełącz na jasny motyw';
+   } else {
+       document.body.classList.add('light-mode');
+       document.getElementById('themeToggle').innerText = 'Przełącz na ciemny motyw';
+   }
+
+   // Dodaj nasłuchiwacz zdarzeń do przycisku przełączania motywu
+   document.getElementById('themeToggle').addEventListener('click', toggleTheme);
+};
