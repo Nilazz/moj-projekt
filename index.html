@@ -33,7 +33,10 @@
         <button type="button" onclick="generateResult()">Generuj wynik</button>
     </form>
 
-    <div id="result"></div>
+    <!-- Pole tekstowe do wyświetlania wyniku -->
+    <textarea id="result" rows="4" readonly></textarea>
+    <!-- Przycisk kopiowania -->
+    <button onclick="copyToClipboard()">Kopiuj</button>
 
     <script src="script.js"></script>
 </body>

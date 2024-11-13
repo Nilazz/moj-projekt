@@ -1,10 +1,12 @@
 body {
     font-family: Arial, sans-serif;
     margin: 20px;
+    background-color: #121212; /* Ciemne tło dla całej strony */
+    color: #ffffff; /* Jasny tekst */
 }
 
 h1 {
-    color: #333;
+    color: #ffffff;
 }
 
 form {
@@ -14,9 +16,34 @@ form {
 label {
     display: block;
     margin-top: 10px;
+    color: #ffffff; /* Jasny tekst dla etykiet */
+}
+
+select {
+    background-color: #333; /* Ciemne tło dla select */
+    color: #ffffff; /* Jasny tekst dla select */
+    border: 1px solid #444; /* Granica */
+    padding: 5px; /* Padding dla select */
 }
 
 #result {
     margin-top: 20px;
-    font-weight: bold;
+    width: 100%;
+    resize: none; /* Zapobiega zmianie rozmiaru pola tekstowego */
+    background-color: #333; /* Ciemne tło dla textarea */
+    color: #ffffff; /* Jasny tekst dla textarea */
+    border: 1px solid #444; /* Granica */
+}
+
+button {
+    margin-top: 10px;
+    background-color: #444; /* Ciemne tło dla przycisków */
+    color: #ffffff; /* Jasny tekst dla przycisków */
+    border: none; /* Bez granicy */
+    padding: 10px 15px; /* Padding dla przycisków */
+    cursor: pointer; /* Kursor wskazujący, że przycisk jest klikalny */
+}
+
+button:hover {
+    background-color: #555; /* Jaśniejszy odcień przycisku po najechaniu myszką */
 }
